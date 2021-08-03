@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    height: 100vh;
+    flex-flow: column;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    height: 7rem;
+}
+.main {
+    display: flex;
+    height: inherit;
+}
+.footer {
+    background-color: khaki;
+    height: 6rem;
+    
+}
