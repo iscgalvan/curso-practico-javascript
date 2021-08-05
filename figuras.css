@@ -10,17 +10,470 @@ body {
 }
 .header {
     display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
     background-color: blueviolet;
-    height: 7rem;
+    height: 12vh;
+    width: 100vw;
+    margin-bottom: 1rem;
 }
 .main {
     display: flex;
-    height: inherit;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 76vh;
+    width: 99vw;
 }
+
+.card:hover ~ .card {
+    /* transform: scale(1.1);
+    opacity: 1;  */
+    transform: translate3d(20px, 0, 0); 
+}
+.main:hover .card {
+    opacity: 0.3;
+}
+.main:hover .card:hover {
+    transform: scale(1.1);
+    opacity: 1; 
+}
+/* .card:hover ~ .cuadrado {
+    transform: scale(0.5);
+} */
+/* .cuadrado:hover ~ .card {
+    transform: scale(0.9);
+    opacity: 0.5; 
+}
+.triangulo:hover ~ .card {
+    transform: scale(0.9); 
+    opacity: 0.5; 
+}
+.circulo:hover ~ .card {
+    transform: scale(0.9);
+    opacity: 0.5; 
+}
+.trianguloIsoceles:hover ~ .card {
+    transform: scale(0.9); 
+    opacity: 0.5; 
+} */
+
+/* .cuadrado:hover  {
+    transform: translate3d(800px, 0, 0); 
+}  */
 .footer {
     background-color: khaki;
-    height: 6rem;
+    height: 12vh;    
+    width: 100vw;
+}
+.boton {
+    opacity: 0.6;
+    border-radius: 10px;
+}
+.boton:hover {
+    background-color: cornflowerblue;
+    transition: 0.3s;
+    opacity: 1;
+    border-radius: 40px;
+}
+
+
     
+
+@media only screen and (min-width: 1024px) {
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* align-items: flex-start;
+    
+        flex-flow: column;
+        justify-content: center; */
+    }
+    .frm {
+        display: flex;
+        flex-direction: column;
+    }
+    .texto h2 {
+        font-size: 30px;
+        margin-top: 15px;
+        margin-bottom: 5%;
+        /* display: flex; */
+        width: 90%;
+        height: 90%;
+        text-align: center;
+        /* justify-content: center; */
+    }
+    .texto label {
+        font-size: 1.2rem;
+        margin: 0 auto;
+        width: 90%;
+        text-align: center;
+
+    }
+    .texto input {
+        width: 90%;
+        height: 2rem;
+        font-size: 20px;
+        margin: 0 auto;
+        
+    }
+
+    .main {
+        display: flex;
+        justify-content: space-around;
+        
+        /* display: flex;
+        flex-wrap: wrap; */
+        /* flex-direction: row;
+        justify-content: space-evenly; */
+        /* height: 76vh; */
+        width: 99vw;
+        
+    }
+    
+    .cuadrado {
+        display: flex;
+        flex-flow: column;
+        height: 400px;
+        background-color: lemonchiffon;
+        border-radius: 10px;
+        width: 28%;
+        max-width: 384px;
+        opacity: 0.8;
+        margin-bottom: 20px;
+    }
+    .cuadrado:hover {
+        opacity: 1;
+    }
+    .triangulo {
+        display: flex;
+        flex-flow: column;
+        background-color: lightcoral;
+        width: 28%;
+        max-width: 384px;
+        height: 400px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    .triangulo:hover {
+        opacity: 1;
+    }
+    .circulo {
+        display: flex;
+        flex-flow: column;
+        background-color: lightgreen;
+        width: 28%;
+        max-width: 384px;
+        height: 400px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    .circulo:hover {
+        opacity: 1;
+    }
+    .trianguloIsoceles {
+        display: flex;
+        flex-flow: column;
+        background-color: lightcoral;
+        width: 28%;
+        max-width: 384px;
+        height: 400px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    .trianguloIsoceles:hover {
+        opacity: 1;
+    }
+        
+    .botonera {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        /* justify-content: center; */
+        /* align-content: flex-start; */
+        /* justify-content: flex-end; */
+        width: 100%;
+        height: 100%;
+    }
+    .boton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 30%;
+        height: 40%;
+        /*   height: 40px;
+        width: 110px; */
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* align-items: flex-start;
+    
+        flex-flow: column;
+        justify-content: center; */
+    }
+    .frm {
+        display: flex;
+        /* flex-direction: column; */
+    }
+    .texto h2 {
+        font-size: 23px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        display: flex;
+        width: 90%;
+        height: 90%;
+        justify-content: center;
+    }
+    .texto label {
+        font-size: 18px;
+        margin-right: 1rem;
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .texto input {
+        width: 11rem;
+        height: 2rem;
+        margin-right: 2rem;
+        font-size: 20px;
+    }
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 76vh;
+        width: 99vw;
+    }
+    .card:hover ~ .card {
+        /* transform: scale(1.1);
+        opacity: 1;  */
+        transition: 5ms;
+        transform: translate3d(0px, 50px, 0px); 
+    }
+    .main:hover .card {
+        opacity: 0.3;
+        transition: 5ms;
+        transform: translate3d(0, 5rem, 0);
+    }
+    .main:hover .card:hover {
+        transform: scale(1.2);
+        opacity: 1; 
+    }
+    .cuadrado {
+        display: flex;
+        flex-flow: column;
+        height: 22vh;
+        background-color: lemonchiffon;
+        border-radius: 20px;
+        width: 70%;
+        min-height: 180px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+    }
+    .cuadrado:hover {
+        opacity: 1;
+    }
+    .triangulo {
+        display: flex;
+        flex-flow: column;
+        background-color: lightcoral;
+        width: 70%;
+        min-height: 180px;
+        height: 22vh;
+        border-radius: 20px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+    }
+    .triangulo:hover {
+        opacity: 1;
+    }
+    .circulo {
+        display: flex;
+        flex-flow: column;
+        background-color: lightgreen;
+        width: 70%;
+        min-height: 180px;
+        height: 22vh;
+        border-radius: 20px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+    }
+    .circulo:hover {
+        opacity: 1;
+    }
+    .trianguloIsoceles {
+        display: flex;
+        flex-flow: column;
+        background-color: #719AF0;
+        width: 70%;
+        
+        height: 22vh;
+        border-radius: 20px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+    }
+    .trianguloIsoceles:hover {
+        opacity: 1;
+    }
+    
+    .botonera {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        /* justify-content: center; */
+        /* align-content: flex-start; */
+        /* justify-content: flex-end; */
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 100%;
+    }
+    .boton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 30%;
+        height: 50%;
+      /*   height: 40px;
+        width: 110px; */
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .header {
+        text-align: center;
+        height: 105px;
+/*         display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        background-color: blueviolet;
+        height: 12vh;
+        width: 100vw;
+        margin-bottom: 1rem; */
+        /* height: 7rem; */
+    }
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* align-items: flex-start;
+    
+        flex-flow: column;
+        justify-content: center; */
+    }
+    .frm {
+        display: flex;
+        /* flex-direction: column; */
+    }
+    .texto h2 {
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        width: 90%;
+        height: 90%;
+        justify-content: center;
+    }
+    .texto label {
+        font-size: 13px;
+        margin-right: 1rem;
+        width: 90%;
+        margin-left: 1rem;
+    }
+    .texto input {
+        width: 11rem;
+        height: 1.8rem;
+        margin-right: 2rem;
+        font-size: 20px;
+    }
+    .cuadrado {
+        display: flex;
+        flex-flow: column;
+        height: 22vh;
+        min-height: 150px;
+        max-height: 350px;
+        background-color: lemonchiffon;
+        border-radius: 10px;
+        width: 100%;
+        opacity: 0.8;
+    }
+    .cuadrado:hover {
+        opacity: 1;
+    }
+    .triangulo {
+        display: flex;
+        flex-flow: column;
+        background-color: lightcoral;
+        width: 100%;
+        height: 22vh;
+        min-height: 150px;
+        max-height: 350px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    .triangulo:hover {
+        opacity: 1;
+    }
+    .circulo {
+        display: flex;
+        flex-flow: column;
+        background-color: lightgreen;
+        width: 100%;
+        height: 22vh;
+        min-height: 150px;
+        max-height: 350px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    .circulo:hover {
+        opacity: 1;
+    }
+    .trianguloIsoceles {
+        display: flex;
+        flex-flow: column;
+        background-color: #719AF0;
+        width: 100%;
+        height: 22vh;
+        min-height: 150px;
+        max-height: 350px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    .trianguloIsoceles:hover {
+        opacity: 1;
+    }
+    
+    .botonera {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        /* justify-content: center; */
+        /* align-content: flex-start; */
+        /* justify-content: flex-end; */
+        width: 100%;
+        height: 100%;
+    }
+    .boton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 30%;
+        height: 40%;
+      /*   height: 40px;
+        width: 110px; */
+    }
+}
+@media only screen and (min-width: 1px) and (max-width: 319px) {
+
 }
