@@ -30,38 +30,16 @@ body {
 .card:hover ~ .card {
     /* transform: scale(1.1);
     opacity: 1;  */
-    transform: translate3d(20px, 0, 0); 
+    transform: translate3d(0px, 0, 0); 
 }
 .main:hover .card {
     opacity: 0.3;
 }
 .main:hover .card:hover {
     transform: scale(1.1);
+    transition: 10ms;
     opacity: 1; 
 }
-/* .card:hover ~ .cuadrado {
-    transform: scale(0.5);
-} */
-/* .cuadrado:hover ~ .card {
-    transform: scale(0.9);
-    opacity: 0.5; 
-}
-.triangulo:hover ~ .card {
-    transform: scale(0.9); 
-    opacity: 0.5; 
-}
-.circulo:hover ~ .card {
-    transform: scale(0.9);
-    opacity: 0.5; 
-}
-.trianguloIsoceles:hover ~ .card {
-    transform: scale(0.9); 
-    opacity: 0.5; 
-} */
-
-/* .cuadrado:hover  {
-    transform: translate3d(800px, 0, 0); 
-}  */
 .footer {
     background-color: khaki;
     height: 12vh;    
@@ -137,7 +115,7 @@ body {
     .cuadrado {
         display: flex;
         flex-flow: column;
-        height: 400px;
+        height: 700px;
         background-color: lemonchiffon;
         border-radius: 10px;
         width: 28%;
@@ -154,7 +132,7 @@ body {
         background-color: lightcoral;
         width: 28%;
         max-width: 384px;
-        height: 400px;
+        height: 700px;
         border-radius: 10px;
         opacity: 0.8;
     }
@@ -167,7 +145,7 @@ body {
         background-color: lightgreen;
         width: 28%;
         max-width: 384px;
-        height: 400px;
+        height: 700px;
         border-radius: 10px;
         opacity: 0.8;
     }
@@ -180,12 +158,24 @@ body {
         background-color: lightcoral;
         width: 28%;
         max-width: 384px;
-        height: 400px;
+        height: 700px;
         border-radius: 10px;
         opacity: 0.8;
     }
     .trianguloIsoceles:hover {
         opacity: 1;
+    }
+    .imagen {
+        display: flex;
+        justify-content: center;
+        /* width: 100%;
+        height: 100%; */
+    }
+    .img {
+        /* width: 20rem;
+        height: 15em;   */   
+        width: 400px;   
+        height: 350px;
     }
         
     .botonera {
@@ -214,15 +204,9 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
-        /* align-items: flex-start;
-    
-        flex-flow: column;
-        justify-content: center; */
     }
     .frm {
         display: flex;
-        /* flex-direction: column; */
     }
     .texto h2 {
         font-size: 23px;
@@ -238,12 +222,16 @@ body {
         margin-right: 1rem;
         width: 90%;
         margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
     }
     .texto input {
         width: 11rem;
         height: 2rem;
         margin-right: 2rem;
         font-size: 20px;
+        margin-bottom: 2rem;
     }
     .main {
         display: flex;
@@ -254,8 +242,6 @@ body {
         width: 99vw;
     }
     .card:hover ~ .card {
-        /* transform: scale(1.1);
-        opacity: 1;  */
         transition: 5ms;
         transform: translate3d(0px, 50px, 0px); 
     }
@@ -271,11 +257,12 @@ body {
     .cuadrado {
         display: flex;
         flex-flow: column;
-        height: 22vh;
         background-color: lemonchiffon;
-        border-radius: 20px;
-        width: 70%;
         min-height: 180px;
+        width: 70%;
+        height: 52vh;
+        min-height: 435px;
+        border-radius: 20px;
         opacity: 0.8;
         margin-bottom: 10px;
     }
@@ -286,9 +273,10 @@ body {
         display: flex;
         flex-flow: column;
         background-color: lightcoral;
-        width: 70%;
         min-height: 180px;
-        height: 22vh;
+        width: 70%;
+        height: 52vh;
+        min-height: 435px;
         border-radius: 20px;
         opacity: 0.8;
         margin-bottom: 10px;
@@ -300,9 +288,9 @@ body {
         display: flex;
         flex-flow: column;
         background-color: lightgreen;
-        width: 70%;
-        min-height: 180px;
-        height: 22vh;
+        width: 70%;        
+        height: 52vh;
+        min-height: 435px;
         border-radius: 20px;
         opacity: 0.8;
         margin-bottom: 10px;
@@ -314,15 +302,27 @@ body {
         display: flex;
         flex-flow: column;
         background-color: #719AF0;
-        width: 70%;
-        
-        height: 22vh;
+        width: 70%;        
+        height: 52vh;
+        min-height: 435px;
         border-radius: 20px;
         opacity: 0.8;
         margin-bottom: 10px;
     }
     .trianguloIsoceles:hover {
         opacity: 1;
+    }
+    .imagen {
+        display: flex;
+        justify-content: center;
+        /* width: 100%;
+        height: 100%; */
+    }
+    .img {
+        /* width: 20rem;
+        height: 15em;   */   
+        width: 300px;   
+        height: 230px;
     }
     
     .botonera {
@@ -343,23 +343,15 @@ body {
         margin: 10px;
         width: 30%;
         height: 50%;
+        min-height: 50px;
       /*   height: 40px;
         width: 110px; */
     }
 }
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 376px) and (max-width: 768px) {
     .header {
         text-align: center;
         height: 105px;
-/*         display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-        background-color: blueviolet;
-        height: 12vh;
-        width: 100vw;
-        margin-bottom: 1rem; */
-        /* height: 7rem; */
     }
     .texto {
         display: flex;
@@ -396,11 +388,24 @@ body {
         margin-right: 2rem;
         font-size: 20px;
     }
+    .card:hover ~ .card {
+        transition: 5ms;
+        transform: translate3d(0px, 10px, 0px); 
+    }
+    .main:hover .card {
+        opacity: 0.3;
+        transition: 5ms;
+        transform: translate3d(0, 23px, 0);
+    }
+    .main:hover .card:hover {
+        transform: scale(1.2);
+        opacity: 1; 
+    }
     .cuadrado {
         display: flex;
         flex-flow: column;
-        height: 22vh;
-        min-height: 150px;
+        height: 30vh;
+        min-height: 250px;
         max-height: 350px;
         background-color: lemonchiffon;
         border-radius: 10px;
@@ -415,8 +420,8 @@ body {
         flex-flow: column;
         background-color: lightcoral;
         width: 100%;
-        height: 22vh;
-        min-height: 150px;
+        height: 30vh;
+        min-height: 250px;
         max-height: 350px;
         border-radius: 10px;
         opacity: 0.8;
@@ -429,8 +434,8 @@ body {
         flex-flow: column;
         background-color: lightgreen;
         width: 100%;
-        height: 22vh;
-        min-height: 150px;
+        height: 30vh;
+        min-height: 250px;
         max-height: 350px;
         border-radius: 10px;
         opacity: 0.8;
@@ -443,14 +448,26 @@ body {
         flex-flow: column;
         background-color: #719AF0;
         width: 100%;
-        height: 22vh;
-        min-height: 150px;
+        height: 30vh;
+        min-height: 250px;
         max-height: 350px;
         border-radius: 10px;
         opacity: 0.8;
     }
     .trianguloIsoceles:hover {
         opacity: 1;
+    }
+    .imagen {
+        display: flex;
+        justify-content: center;
+        /* width: 100%;
+        height: 100%; */
+    }
+    .img {
+        /* width: 20rem;
+        height: 15em;   */   
+        width: 200px;   
+        height: 95px;
     }
     
     .botonera {
@@ -469,11 +486,160 @@ body {
         align-items: center;
         margin: 10px;
         width: 30%;
-        height: 40%;
+        height: 50%;
+        min-height: 45%;
+        max-height: 55%;
       /*   height: 40px;
         width: 110px; */
     }
 }
-@media only screen and (min-width: 1px) and (max-width: 319px) {
+@media only screen and (min-width: 1px) and (max-width: 375px) {
+    .header {
+        text-align: center;
+        height: 105px;
+    }
+    .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* align-items: flex-start;
+    
+        flex-flow: column;
+        justify-content: center; */
+    }
+    .frm {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        /* flex-direction: column; */
+    }
+    .texto h2 {
+        font-size: 80%;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        display: flex;
+        width: 90%;
+        height: 90%;
+        justify-content: center;
+    }
+    .texto label {
+        font-size: 75%;
+        margin-right: 1rem;
+        width: 90%;
+        margin-left: 1rem;
+        text-align: center;
+    }
+    .texto input {
+        width: 11rem;
+        height: 1.8rem;
 
+        margin: 5px auto;
+        font-size: 20px;
+    }
+    .card:hover ~ .card {
+        transition: 5ms;
+        transform: translate3d(0px, 10px, 0px); 
+    }
+    .main:hover .card {
+        opacity: 0.3;
+        transition: 5ms;
+        transform: translate3d(0, 23px, 0);
+    }
+    .main:hover .card:hover {
+        transform: scale(1.2);
+        opacity: 1; 
+    }
+    .cuadrado {
+        display: flex;
+        flex-flow: column;
+        height: 30vh;
+        min-height: 250px;
+        max-height: 350px;
+        background-color: lemonchiffon;
+        border-radius: 10px;
+        width: 100%;
+        opacity: 0.8;
+    }
+    .cuadrado:hover {
+        opacity: 1;
+    }
+    .triangulo {
+        display: flex;
+        flex-flow: column;
+        background-color: lightcoral;
+        width: 100%;
+        height: 30vh;
+        min-height: 250px;
+        max-height: 350px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    .triangulo:hover {
+        opacity: 1;
+    }
+    .circulo {
+        display: flex;
+        flex-flow: column;
+        background-color: lightgreen;
+        width: 100%;
+        height: 30vh;
+        min-height: 250px;
+        max-height: 350px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    .circulo:hover {
+        opacity: 1;
+    }
+    .trianguloIsoceles {
+        display: flex;
+        flex-flow: column;
+        background-color: #719AF0;
+        width: 100%;
+        height: 30vh;
+        min-height: 250px;
+        max-height: 350px;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    .trianguloIsoceles:hover {
+        opacity: 1;
+    }
+    .imagen {
+        display: flex;
+        justify-content: center;
+        /* width: 100%;
+        height: 100%; */
+    }
+    .img {
+        /* width: 20rem;
+        height: 15em;   */   
+        width: 200px;   
+        height: 95px;
+    }
+    
+    .botonera {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        /* justify-content: center; */
+        /* align-content: flex-start; */
+        /* justify-content: flex-end; */
+        width: 100%;
+        height: 100%;
+    }
+    .boton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        width: 25%;
+        height: 50%;
+        min-height: 45%;
+        max-height: 55%;
+      /*   height: 40px;
+        width: 110px; */
+    }
+}
 }
